@@ -1,8 +1,11 @@
 package ts.react;
 
+import js.html.HtmlElement;
 import react.ReactNode;
 
-interface DOMAttributes<T> {
+import ts.react.EventHandler;
+
+interface DOMAttributes<T:HtmlElement> {
 	@:optional var children:ReactNode;
 	@:optional var dangerouslySetInnerHTML:{__html:String};
 
