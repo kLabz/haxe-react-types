@@ -3,13 +3,11 @@ package react.types;
 import haxe.extern.EitherType;
 import js.html.Event;
 import js.html.HtmlElement;
-import react.React.CreateElementType;
 import react.types.EventHandler;
 
 typedef HandlerOrVoid<Handler> = EitherType<Handler, EitherType<Event->Void, Void->Void>>;
 
 typedef DOMAttributes<T:HtmlElement> = {
-	@:optional var children:CreateElementType;
 	@:optional var dangerouslySetInnerHTML:{__html:String};
 
 	// Clipboard Events
