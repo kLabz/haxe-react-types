@@ -5,6 +5,14 @@ import haxe.macro.Context;
 import haxe.macro.Type;
 
 class RecordMacro {
+	public static function build():ComplexType {
+		return buildRecord(
+			Context.getLocalType(),
+			macro :String,
+			true
+		);
+	}
+
 	// Note: only Record<T, String> is supported atm
 	public static function buildRecord(
 		abstractEnumType:Type,
