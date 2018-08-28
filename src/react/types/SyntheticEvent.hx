@@ -1,4 +1,4 @@
-package ts.react;
+package react.types;
 
 import js.html.DataTransfer;
 import js.html.Document;

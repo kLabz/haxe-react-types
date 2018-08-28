@@ -1,12 +1,11 @@
-package ts.react;
+package react.types;
 
 import js.html.HtmlElement;
-import react.ReactNode;
-
-import ts.react.EventHandler;
+import react.React.CreateElementType;
+import react.types.EventHandler;
 
 interface DOMAttributes<T:HtmlElement> {
-	@:optional var children:ReactNode;
+	@:optional var children:CreateElementType;
 	@:optional var dangerouslySetInnerHTML:{__html:String};
 
 	// Clipboard Events

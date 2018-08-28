@@ -1,4 +1,4 @@
-package ts.macro;
+package react.types.macro;
 
 import haxe.macro.Expr;
 import haxe.macro.Context;

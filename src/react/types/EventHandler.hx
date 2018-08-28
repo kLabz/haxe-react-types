@@ -1,7 +1,7 @@
-package ts.react;
+package react.types;
 
 import js.html.HtmlElement;
-import ts.react.SyntheticEvent;
+import react.types.SyntheticEvent;
 
 typedef EventHandler<TElement:HtmlElement, E:BaseSyntheticEvent<TElement>> = E->Void;
 typedef ReactEventHandler<TElement:HtmlElement> = EventHandler<TElement, BaseSyntheticEvent<TElement>>;
