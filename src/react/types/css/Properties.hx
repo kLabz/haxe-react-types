@@ -282,7 +282,7 @@ typedef Properties = {
   @:optional var tableLayout(default, never):String;
   @:optional var textAlign(default, never):TextAlign;
   @:optional var textAlignLast(default, never):TextAlignLast;
-  @:optional var textCombineUpright(default, never):String;
+  @:optional var textCombineUpright(default, never):TextCombineUpright;
   @:optional var textDecoration(default, never):String;
   @:optional var textDecorationColor(default, never):String;
   @:optional var textDecorationLine(default, never):String;
