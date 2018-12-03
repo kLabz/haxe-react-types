@@ -299,7 +299,7 @@ typedef Properties = {
   @:optional var textOverflow(default, never):String;
   @:optional var textShadow(default, never):String;
   @:optional var textSpaceCollapse(default, never):String;
-  @:optional var textTransform(default, never):String;
+  @:optional var textTransform(default, never):TextTransform;
   @:optional var textUnderlinePosition(default, never):String;
   @:optional var textWrap(default, never):String;
   @:optional var top(default, never):IntString;
