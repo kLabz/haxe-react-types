@@ -1,12 +1,7 @@
 package react.types;
 
-abstract IntString(String) from String to String {
-	@:from
-	static function fromInt(i:Int) return (Std.string(i) :IntString);
-
-	@:from
-	static function fromFloat(i:Float) return (Std.string(i) :IntString);
-}
+@:coreType
+abstract IntString from String from Int from Float from Array<Float> from Array<Array<Float>> {}
 
 // Based off https://github.com/back2dos/js-virtual-dom 's vdom.Style
 // Adapted to support non-string values and enums (WIP)
@@ -127,7 +122,7 @@ typedef CSSProperties = {
   @:optional var flexBasis(default, never):String;
   @:optional var flexDirection(default, never):String;
   @:optional var flexFlow(default, never):String;
-  @:optional var flexGrow(default, never):String;
+  @:optional var flexGrow(default, never):IntString;
   @:optional var flexShrink(default, never):String;
   @:optional var flexWrap(default, never):String;
   @:optional var float(default, never):String;
