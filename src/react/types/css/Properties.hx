@@ -281,7 +281,7 @@ typedef Properties = {
   @:optional var tabSize(default, never):IntString;
   @:optional var tableLayout(default, never):String;
   @:optional var textAlign(default, never):TextAlign;
-  @:optional var textAlignLast(default, never):String;
+  @:optional var textAlignLast(default, never):TextAlignLast;
   @:optional var textCombineUpright(default, never):String;
   @:optional var textDecoration(default, never):String;
   @:optional var textDecorationColor(default, never):String;
