@@ -1,6 +1,6 @@
-package react.types;
+package react.types.css;
 
-@:enum abstract CSSAlignContent(String) to String {
+@:enum abstract AlignContent(String) to String {
 	var Stretch = "stretch";
 	var Center = "center";
 	var FlexStart = "flex-start";

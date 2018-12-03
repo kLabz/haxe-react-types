@@ -1,6 +1,6 @@
-package react.types;
+package react.types.css;
 
-@:enum abstract CSSFlexDirection(String) to String {
+@:enum abstract FlexDirection(String) to String {
 	var Row = "row";
 	var RowReverse = "row-reverse";
 	var Column = "column";

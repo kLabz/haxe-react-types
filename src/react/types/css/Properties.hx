@@ -1,11 +1,11 @@
-package react.types;
+package react.types.css;
 
 @:coreType
 abstract IntString from String from Int from Float from Array<Float> from Array<Array<Float>> {}
 
 // Based off https://github.com/back2dos/js-virtual-dom 's vdom.Style
 // Adapted to support non-string values and enums (WIP)
-typedef CSSProperties = {
+typedef Properties = {
   @:optional var alignContent(default, never):String;
   @:optional var alignItems(default, never):String;
   @:optional var alignSelf(default, never):String;
@@ -280,7 +280,7 @@ typedef CSSProperties = {
   @:optional var stringSet(default, never):String;
   @:optional var tabSize(default, never):IntString;
   @:optional var tableLayout(default, never):String;
-  @:optional var textAlign(default, never):String;
+  @:optional var textAlign(default, never):TextAlign;
   @:optional var textAlignLast(default, never):String;
   @:optional var textCombineUpright(default, never):String;
   @:optional var textDecoration(default, never):String;

@@ -1,6 +1,6 @@
-package react.types;
+package react.types.css;
 
-@:enum abstract CSSJustifyContent(String) to String {
+@:enum abstract JustifyContent(String) to String {
 	var FlexStart = "flex-start";
 	var Center = "center";
 	var FlexEnd = "flex-end";
