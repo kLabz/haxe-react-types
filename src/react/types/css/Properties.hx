@@ -1,5 +1,7 @@
 package react.types.css;
 
+import react.types.css.Overflow;
+
 @:coreType
 abstract IntString from String from Int from Float from Array<Float> from Array<Array<Float>> {}
 
@@ -121,7 +123,7 @@ typedef Properties = {
   @:optional var flex(default, never):String;
   @:optional var flexBasis(default, never):String;
   @:optional var flexDirection(default, never):FlexDirection;
-  @:optional var flexFlow(default, never):String;
+  @:optional var flexFlow(default, never):FlexFlow;
   @:optional var flexGrow(default, never):IntString;
   @:optional var flexShrink(default, never):String;
   @:optional var flexWrap(default, never):FlexWrap;
@@ -229,10 +231,10 @@ typedef Properties = {
   @:optional var outlineOffset(default, never):IntString;
   @:optional var outlineStyle(default, never):String;
   @:optional var outlineWidth(default, never):IntString;
-  @:optional var overflow(default, never):Overflow;
+  @:optional var overflow(default, never):OverflowCompo;
   @:optional var overflowWrap(default, never):String;
-  @:optional var overflowX(default, never):String;
-  @:optional var overflowY(default, never):String;
+  @:optional var overflowX(default, never):Overflow;
+  @:optional var overflowY(default, never):Overflow;
   @:optional var padding(default, never):IntString;
   @:optional var paddingBottom(default, never):IntString;
   @:optional var paddingLeft(default, never):IntString;
@@ -251,7 +253,7 @@ typedef Properties = {
   @:optional var pitch(default, never):String;
   @:optional var pitchRange(default, never):String;
   @:optional var playDuring(default, never):String;
-  @:optional var position(default, never):String;
+  @:optional var position(default, never):Position;
   @:optional var presentationLevel(default, never):String;
   @:optional var quotes(default, never):String;
   @:optional var regionFragment(default, never):String;
