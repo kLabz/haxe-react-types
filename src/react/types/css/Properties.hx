@@ -6,8 +6,8 @@ abstract IntString from String from Int from Float from Array<Float> from Array<
 // Based off https://github.com/back2dos/js-virtual-dom 's vdom.Style
 // Adapted to support non-string values and enums (WIP)
 typedef Properties = {
-  @:optional var alignContent(default, never):String;
-  @:optional var alignItems(default, never):String;
+  @:optional var alignContent(default, never):AlignContent;
+  @:optional var alignItems(default, never):AlignItems;
   @:optional var alignSelf(default, never):String;
   @:optional var alignmentAdjust(default, never):String;
   @:optional var alignmentBaseline(default, never):String;
@@ -120,11 +120,11 @@ typedef Properties = {
   @:optional var filter(default, never):String;
   @:optional var flex(default, never):String;
   @:optional var flexBasis(default, never):String;
-  @:optional var flexDirection(default, never):String;
+  @:optional var flexDirection(default, never):FlexDirection;
   @:optional var flexFlow(default, never):String;
   @:optional var flexGrow(default, never):IntString;
   @:optional var flexShrink(default, never):String;
-  @:optional var flexWrap(default, never):String;
+  @:optional var flexWrap(default, never):FlexWrap;
   @:optional var float(default, never):String;
   @:optional var floatOffset(default, never):String;
   @:optional var floodColor(default, never):String;
@@ -166,7 +166,7 @@ typedef Properties = {
   @:optional var imeMode(default, never):String;
   @:optional var initialLetters(default, never):String;
   @:optional var inlineBoxAlign(default, never):String;
-  @:optional var justifyContent(default, never):String;
+  @:optional var justifyContent(default, never):JustifyContent;
   @:optional var justifyItems(default, never):String;
   @:optional var justifySelf(default, never):String;
   @:optional var left(default, never):IntString;

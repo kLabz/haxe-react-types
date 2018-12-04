@@ -1,6 +1,6 @@
 package react.types.css;
 
-@:enum abstract FlexDirection(String) to String {
+@:enum abstract FlexDirection(String) from GlobalValue to String {
 	var Row = "row";
 	var RowReverse = "row-reverse";
 	var Column = "column";
