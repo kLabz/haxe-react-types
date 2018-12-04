@@ -312,7 +312,7 @@ typedef Properties = {
   @:optional var transitionProperty(default, never):String;
   @:optional var transitionTimingFunction(default, never):String;
   @:optional var unicodeBidi(default, never):String;
-  @:optional var verticalAlign(default, never):String;
+  @:optional var verticalAlign(default, never):VerticalAlign;
   @:optional var visibility(default, never):String;
   @:optional var voiceBalance(default, never):String;
   @:optional var voiceDuration(default, never):String;
