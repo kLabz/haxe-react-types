@@ -229,7 +229,7 @@ typedef Properties = {
   @:optional var outlineOffset(default, never):IntString;
   @:optional var outlineStyle(default, never):String;
   @:optional var outlineWidth(default, never):IntString;
-  @:optional var overflow(default, never):String;
+  @:optional var overflow(default, never):Overflow;
   @:optional var overflowWrap(default, never):String;
   @:optional var overflowX(default, never):String;
   @:optional var overflowY(default, never):String;
@@ -296,7 +296,7 @@ typedef Properties = {
   @:optional var textIndent(default, never):String;
   @:optional var textJustify(default, never):String;
   @:optional var textOrientation(default, never):String;
-  @:optional var textOverflow(default, never):String;
+  @:optional var textOverflow(default, never):TextOverflow;
   @:optional var textShadow(default, never):String;
   @:optional var textSpaceCollapse(default, never):String;
   @:optional var textTransform(default, never):TextTransform;
@@ -323,7 +323,7 @@ typedef Properties = {
   @:optional var voiceStress(default, never):String;
   @:optional var voiceVolume(default, never):String;
   @:optional var volume(default, never):String;
-  @:optional var whiteSpace(default, never):String;
+  @:optional var whiteSpace(default, never):WhiteSpace;
   @:optional var widows(default, never):String;
   @:optional var width(default, never):IntString;
   @:optional var willChange(default, never):String;
