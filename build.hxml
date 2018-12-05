@@ -1,5 +1,0 @@
---js .build/test.js
-
--cp src
-apollo.client.ApolloClient
-
