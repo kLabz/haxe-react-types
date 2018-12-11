@@ -1,8 +1,8 @@
 {
   "name": "react-types",
   "description": "Additional typings for react libs",
-  "version": "0.5.0",
-  "releasenote": "Initial haxelib release",
+  "version": "0.5.1",
+  "releasenote": "Added DOMOrCallback",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-react-types",
   "license": "MIT",
   "tags": [],
