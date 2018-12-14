@@ -38,7 +38,7 @@ class RecordMacro {
 					{
 						kind: FVar(valueType, null),
 						name: name,
-						meta: meta.copy(),
+						meta: meta == null ? null : meta.copy(),
 						pos: Context.currentPos()
 					};
 
