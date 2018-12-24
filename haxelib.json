@@ -1,8 +1,8 @@
 {
   "name": "react-types",
   "description": "Additional typings for react libs",
-  "version": "0.5.3",
-  "releasenote": "Add BaseProps and improve RecordMacro",
+  "version": "0.5.4",
+  "releasenote": "Use Element instead of HtmlElement",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-react-types",
   "license": "MIT",
   "tags": [],
