@@ -3,13 +3,45 @@ package react.types;
 import haxe.extern.EitherType;
 import js.html.Element;
 import js.html.Event;
+
+import css.Properties;
 import react.types.EventHandler;
 
+// TODO: abstract
 typedef HandlerOrVoid<Handler> = EitherType<Handler, EitherType<Event->Void, Void->Void>>;
 
 typedef DOMAttributes<T:Element> = {
-	@:optional var dangerouslySetInnerHTML:{__html:String};
+	> DOMEvents<T>,
 
+	// React specific (or renamed) props
+	@:optional var className:String;
+	@:optional var dangerouslySetInnerHTML:{__html:String};
+	@:optional var htmlFor:String;
+
+	// Global attributes
+	// https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes<Paste>
+	@:optional var accessKey:String;
+	@:optional var contenteditable:Bool;
+	@:optional var contextmenu:String;
+	@:optional var dir:DirAttribute;
+	@:optional var draggable:Bool;
+	@:optional var hidden:Bool;
+	@:optional var id:String;
+	@:optional var inputmode:InputMode;
+	@:optional var is:String;
+	@:optional var lang:String;
+	@:optional var slot:String;
+	@:optional var spellcheck:Bool;
+	@:optional var style:Properties;
+	@:optional var tabIndex:Int;
+	@:optional var title:String;
+
+	// Other commonly used html attributes
+	@:optional var href:String;
+	// TODO
+}
+
+typedef DOMEvents<T:Element> = {
 	// Clipboard Events
 	@:optional var onCopy:HandlerOrVoid<ClipboardEventHandler<T>>;
 	@:optional var onCopyCapture:HandlerOrVoid<ClipboardEventHandler<T>>;
