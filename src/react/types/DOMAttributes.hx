@@ -7,8 +7,11 @@ import js.html.Event;
 import css.Properties;
 import react.types.EventHandler;
 
-// TODO: abstract
-typedef HandlerOrVoid<Handler> = EitherType<Handler, EitherType<Event->Void, Void->Void>>;
+typedef ClassicHandler = Event->Void;
+typedef VoidHandler = Void->Void;
+
+@:coreType
+abstract HandlerOrVoid<Handler> from Handler from VoidHandler from ClassicHandler {}
 
 typedef DOMAttributes<T:Element> = {
 	> DOMEvents<T>,
@@ -19,7 +22,7 @@ typedef DOMAttributes<T:Element> = {
 	@:optional var htmlFor:String;
 
 	// Global attributes
-	// https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes<Paste>
+	// https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
 	@:optional var accessKey:String;
 	@:optional var contenteditable:Bool;
 	@:optional var contextmenu:String;
