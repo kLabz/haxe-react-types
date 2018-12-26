@@ -1,8 +1,8 @@
 {
   "name": "react-types",
   "description": "Additional typings for react libs",
-  "version": "0.5.4",
-  "releasenote": "Use Element instead of HtmlElement",
+  "version": "0.6.0",
+  "releasenote": "New helpers, improved DOMAttributes and event handlers",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-react-types",
   "license": "MIT",
   "tags": [],
