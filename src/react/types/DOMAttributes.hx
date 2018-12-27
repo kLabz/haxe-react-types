@@ -1,17 +1,9 @@
 package react.types;
 
-import haxe.extern.EitherType;
 import js.html.Element;
-import js.html.Event;
 
 import css.Properties;
 import react.types.EventHandler;
-
-typedef ClassicHandler = Event->Void;
-typedef VoidHandler = Void->Void;
-
-@:coreType
-abstract HandlerOrVoid<Handler> from Handler from VoidHandler from ClassicHandler {}
 
 typedef DOMAttributes<T:Element> = {
 	> DOMEvents<T>,
