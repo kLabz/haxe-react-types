@@ -1,8 +1,8 @@
 {
   "name": "react-types",
   "description": "Additional typings for react libs",
-  "version": "0.7.0",
-  "releasenote": "Moved HandlerOrVoid, added CallbackOrVoid",
+  "version": "0.7.1",
+  "releasenote": "Added NonEmptyBaseProps",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-react-types",
   "license": "MIT",
   "tags": [],
