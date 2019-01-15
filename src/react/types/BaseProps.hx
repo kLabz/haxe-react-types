@@ -1,11 +1,9 @@
 package react.types;
 
-import react.ReactComponent.ReactFragment;
+import react.BaseProps;
 
-typedef BaseProps = {
-	@:optional var children:ReactFragment;
-}
+@:deprecated
+typedef BaseProps = BasePropsWithOptChildren;
 
-typedef NonEmptyBaseProps = {
-	var children:ReactFragment;
-}
+@:deprecated
+typedef NonEmptyBaseProps = BasePropsWithChildren;

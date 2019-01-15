@@ -1,8 +1,8 @@
 {
   "name": "react-types",
   "description": "Additional typings for react libs",
-  "version": "0.7.1",
-  "releasenote": "Added NonEmptyBaseProps",
+  "version": "0.8.0",
+  "releasenote": "Deprecated react.types.BaseProps",
   "url": "https://gitlab.com/k-labz/haxe-oss/haxe-react-types",
   "license": "MIT",
   "tags": [],
