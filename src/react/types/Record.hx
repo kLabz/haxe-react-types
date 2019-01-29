@@ -1,4 +1,4 @@
 package react.types;
 
 @:genericBuild(react.types.macro.RecordMacro.build())
-typedef Record<T> = {}
+class Record<T> {}
