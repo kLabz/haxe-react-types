@@ -1,12 +1,11 @@
 package react.types;
 
 import js.html.Element;
-import js.html.HtmlElement;
 
 import css.Properties;
 import react.types.EventHandler;
 
-typedef StandardDOMAttributes = DOMAttributes<HtmlElement>;
+typedef StandardDOMAttributes = DOMAttributes<Element>;
 
 typedef DOMAttributes<T:Element> = {
 	> DOMEvents<T>,
