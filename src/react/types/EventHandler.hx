@@ -12,6 +12,7 @@ typedef DragEventHandler<TElement:Element> = EventHandler<TElement, DragEvent<TE
 typedef FocusEventHandler<TElement:Element> = EventHandler<TElement, FocusEvent<TElement>>;
 typedef FormEventHandler<TElement:Element> = EventHandler<TElement, FormEvent<TElement>>;
 typedef ChangeEventHandler<TElement:Element> = EventHandler<TElement, ChangeEvent<TElement>>;
+typedef InputEventHandler<TElement:Element> = EventHandler<TElement, InputEvent<TElement>>;
 typedef KeyboardEventHandler<TElement:Element> = EventHandler<TElement, KeyboardEvent<TElement>>;
 typedef MouseEventHandler<TElement:Element> = EventHandler<TElement, MouseEvent<TElement>>;
 typedef TouchEventHandler<TElement:Element> = EventHandler<TElement, TouchEvent<TElement>>;

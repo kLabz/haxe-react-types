@@ -78,6 +78,7 @@ typedef DOMEvents<T:Element> = {
 	@:optional var onLoadCapture:HandlerOrVoid<ReactEventHandler<T>>;
 	@:optional var onError:HandlerOrVoid<ReactEventHandler<T>>; // also a Media Event
 	@:optional var onErrorCapture:HandlerOrVoid<ReactEventHandler<T>>; // also a Media Event
+
 	// Keyboard Events
 	@:optional var onKeyDown:HandlerOrVoid<KeyboardEventHandler<T>>;
 	@:optional var onKeyDownCapture:HandlerOrVoid<KeyboardEventHandler<T>>;
@@ -85,6 +86,7 @@ typedef DOMEvents<T:Element> = {
 	@:optional var onKeyPressCapture:HandlerOrVoid<KeyboardEventHandler<T>>;
 	@:optional var onKeyUp:HandlerOrVoid<KeyboardEventHandler<T>>;
 	@:optional var onKeyUpCapture:HandlerOrVoid<KeyboardEventHandler<T>>;
+	@:optional var onBeforeInput:HandlerOrVoid<InputEventHandler<T>>;
 
 	// Media Events
 	@:optional var onAbort:HandlerOrVoid<ReactEventHandler<T>>;

@@ -102,6 +102,14 @@ typedef ChangeEvent<TElement:Element> = {
 	var target:TElement;
 }
 
+typedef InputEvent<TElement:Element> = {
+	> BaseSyntheticEvent<TElement>,
+	var data:String;
+	var dataTransfer:DataTransfer;
+	var inputType:String; // TODO: enum from https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes
+	var isComposing:Bool;
+}
+
 typedef KeyboardEvent<TElement:Element> = {
 	> BaseSyntheticEvent<TElement>,
 	var altKey:Bool;
