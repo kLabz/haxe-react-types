@@ -4,6 +4,8 @@ import haxe.macro.Expr;
 import haxe.macro.Context;
 import haxe.macro.Type;
 
+using haxe.macro.ComplexTypeTools;
+
 class RecordMacro {
 	// Note: this will only be persistent in haxe 4 preview 5 and newer
 	@:persistent static var recordCache:Map<String, Array<Field>> = new Map();
@@ -24,7 +26,7 @@ class RecordMacro {
 	):ComplexType {
 		switch (abstractEnumType) {
 			case TInst(_, [TAbstract(_.get() => t, params)]):
-				var cacheKey = '${t.module}.${t.name}';
+				var cacheKey = '${t.module}.${t.name}/${valueType.toString()}';
 				if (recordCache.exists(cacheKey))
 					return TAnonymous(recordCache.get(cacheKey));
 
