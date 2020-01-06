@@ -26,7 +26,7 @@ class RecordMacro {
 	):ComplexType {
 		switch (abstractEnumType) {
 			case TInst(_, [TAbstract(_.get() => t, params)]):
-				var cacheKey = '${t.module}.${t.name}/${valueType.toString()}';
+				var cacheKey = '${t.module}.${t.name}/${valueType.toString()}/${asPartial}';
 				if (recordCache.exists(cacheKey))
 					return TAnonymous(recordCache.get(cacheKey));
 
