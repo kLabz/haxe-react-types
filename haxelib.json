@@ -1,9 +1,9 @@
 {
   "name": "react-types",
   "description": "Additional typings for react libs",
-  "version": "0.10.2",
-  "releasenote": "Fix cache when using same source with different value types",
-  "url": "https://gitlab.com/k-labz/haxe-oss/haxe-react-types",
+  "version": "0.11.0",
+  "releasenote": "SVG attributes typing, new helpers, using DOMElement instead of Element",
+  "url": "https://github.com/kLabz/haxe-react-types",
   "license": "MIT",
   "tags": [],
   "classPath": "src",
