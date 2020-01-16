@@ -1,13 +1,13 @@
 package react.types;
 
-import js.html.Element;
+import js.html.DOMElement;
 
 import css.Properties;
 import react.types.EventHandler;
 
-typedef StandardDOMAttributes = DOMAttributes<Element>;
+typedef StandardDOMAttributes = DOMAttributes<DOMElement>;
 
-typedef DOMAttributes<T:Element> = {
+typedef DOMAttributes<T:DOMElement> = {
 	> DOMEvents<T>,
 
 	// React specific (or renamed) props
@@ -38,7 +38,7 @@ typedef DOMAttributes<T:Element> = {
 	// TODO
 }
 
-typedef DOMEvents<T:Element> = {
+typedef DOMEvents<T:DOMElement> = {
 	// Clipboard Events
 	@:optional var onCopy:HandlerOrVoid<ClipboardEventHandler<T>>;
 	@:optional var onCopyCapture:HandlerOrVoid<ClipboardEventHandler<T>>;

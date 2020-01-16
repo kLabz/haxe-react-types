@@ -4,7 +4,7 @@ import js.html.DataTransfer;
 import js.html.Document;
 import js.html.Event;
 import js.html.EventTarget;
-import js.html.Element;
+import js.html.DOMElement;
 import js.html.AnimationEvent as NativeAnimationEvent;
 import js.html.ClipboardEvent as NativeClipboardEvent;
 import js.html.CompositionEvent as NativeCompositionEvent;
@@ -18,9 +18,9 @@ import js.html.TransitionEvent as NativeTransitionEvent;
 import js.html.UIEvent as NativeUIEvent;
 import js.html.WheelEvent as NativeWheelEvent;
 
-typedef BaseSyntheticEvent<TElement:Element> = {
+typedef BaseSyntheticEvent<TElement:DOMElement> = {
 	var bubbles:Bool;
-	// var currentTarget:EventTarget & TElement;
+	var target:TElement;
 	var currentTarget:TElement;
 	var cancelable:Bool;
 	var defaultPrevented:Bool;
@@ -35,25 +35,25 @@ typedef BaseSyntheticEvent<TElement:Element> = {
 	var type:String;
 }
 
-typedef SyntheticEvent<TElement:Element> = {
+typedef SyntheticEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var nativeEvent:Event;
-	var target:EventTarget;
+	// var target:EventTarget;
 }
 
-typedef ClipboardEvent<TElement:Element> = {
+typedef ClipboardEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var clipboardData:DataTransfer;
 	var nativeEvent:NativeClipboardEvent;
 }
 
-typedef CompositionEvent<TElement:Element> = {
+typedef CompositionEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var data:String;
 	var nativeEvent:NativeCompositionEvent;
 }
 
-typedef DragEvent<TElement:Element> = {
+typedef DragEvent<TElement:DOMElement> = {
 	> BaseMouseEvent<TElement>,
 	var dataTransfer:DataTransfer;
 	var nativeEvent:NativeDragEvent;
@@ -65,7 +65,7 @@ typedef DragEvent<TElement:Element> = {
 	var Touch = 'touch';
 }
 
-typedef PointerEvent<TElement:Element> = {
+typedef PointerEvent<TElement:DOMElement> = {
 	> BaseMouseEvent<TElement>,
 	var pointerId:Int;
 	var pressure:Float;
@@ -78,31 +78,31 @@ typedef PointerEvent<TElement:Element> = {
 	var nativeEvent:NativePointerEvent;
 }
 
-typedef FocusEvent<TElement:Element> = {
+typedef FocusEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var nativeEvent:NativeFocusEvent;
 	var relatedTarget:EventTarget;
 	// var target:EventTarget & TElement;
-	var target:TElement;
+	// var target:TElement;
 }
 
-typedef FormEvent<TElement:Element> = {
+typedef FormEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 }
 
-typedef InvalidEvent<TElement:Element> = {
-	> BaseSyntheticEvent<TElement>,
-	// var target:EventTarget & TElement;
-	var target:TElement;
-}
-
-typedef ChangeEvent<TElement:Element> = {
+typedef InvalidEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	// var target:EventTarget & TElement;
-	var target:TElement;
+	// var target:TElement;
 }
 
-typedef InputEvent<TElement:Element> = {
+typedef ChangeEvent<TElement:DOMElement> = {
+	> BaseSyntheticEvent<TElement>,
+	// var target:EventTarget & TElement;
+	// var target:TElement;
+}
+
+typedef InputEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var data:String;
 	var dataTransfer:DataTransfer;
@@ -110,7 +110,7 @@ typedef InputEvent<TElement:Element> = {
 	var isComposing:Bool;
 }
 
-typedef KeyboardEvent<TElement:Element> = {
+typedef KeyboardEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var altKey:Bool;
 	var charCode:Int;
@@ -127,7 +127,7 @@ typedef KeyboardEvent<TElement:Element> = {
 	var which:Int;
 }
 
-typedef BaseMouseEvent<TElement:Element> = {
+typedef BaseMouseEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var altKey:Bool;
 	var button:Int;
@@ -145,7 +145,7 @@ typedef BaseMouseEvent<TElement:Element> = {
 	var shiftKey:Bool;
 }
 
-typedef MouseEvent<TElement:Element> = {
+typedef MouseEvent<TElement:DOMElement> = {
 	> BaseMouseEvent<TElement>,
 	var nativeEvent:NativeMouseEvent;
 }
@@ -167,7 +167,7 @@ extern interface TouchList extends ArrayAccess<Touch> {
 	function identifiedTouch(identifier:Int):Touch;
 }
 
-typedef TouchEvent<TElement:Element> = {
+typedef TouchEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var altKey:Bool;
 	var changedTouches:TouchList;
@@ -187,14 +187,14 @@ typedef AbstractView = {
 	var document:Document;
 }
 
-typedef UIEvent<TElement:Element> = {
+typedef UIEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var detail:Float;
 	var nativeEvent:NativeUIEvent;
 	var view:AbstractView;
 }
 
-typedef WheelEvent<TElement:Element> = {
+typedef WheelEvent<TElement:DOMElement> = {
 	> BaseMouseEvent<TElement>,
 	var deltaMode:Int;
 	var deltaX:Float;
@@ -203,7 +203,7 @@ typedef WheelEvent<TElement:Element> = {
 	var nativeEvent:NativeWheelEvent;
 }
 
-typedef AnimationEvent<TElement:Element> = {
+typedef AnimationEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var animationName:String;
 	var elapsedTime:Float;
@@ -211,7 +211,7 @@ typedef AnimationEvent<TElement:Element> = {
 	var pseudoElement:String;
 }
 
-typedef TransitionEvent<TElement:Element> = {
+typedef TransitionEvent<TElement:DOMElement> = {
 	> BaseSyntheticEvent<TElement>,
 	var elapsedTime:Float;
 	var nativeEvent:NativeTransitionEvent;
