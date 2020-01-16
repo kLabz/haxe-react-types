@@ -1,4 +1,4 @@
-package react.types;
+package react.types.or;
 
 import react.ReactComponent.ReactFragment;
 

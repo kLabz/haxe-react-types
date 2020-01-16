@@ -1,6 +1,3 @@
 package react.types;
 
-import js.html.DOMElement;
-
-@:coreType
-abstract DOMOrCallback from DOMElement from Void->DOMElement {}
+typedef DOMOrCallback = react.types.or.DOMOrCallback;

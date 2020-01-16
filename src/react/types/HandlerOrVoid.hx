@@ -1,8 +1,4 @@
 package react.types;
 
-import js.html.Event;
-
-typedef ClassicHandler = Event->Void;
-
-@:coreType
-abstract HandlerOrVoid<Handler> from Handler from Noop from ClassicHandler {}
+typedef ClassicHandler = react.types.or.HandlerOrVoid.ClassicHandler;
+typedef HandlerOrVoid<Handler> = react.types.or.HandlerOrVoid<Handler>;
