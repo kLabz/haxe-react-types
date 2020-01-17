@@ -1,7 +1,7 @@
 package react.types.or;
 
+import haxe.extern.EitherType;
 import js.html.Element;
 import react.ReactComponent.ReactElement;
 
-@:coreType
-abstract ElementOrNode from Element from ReactElement {}
+typedef ElementOrNode = EitherType<Element, ReactElement>;

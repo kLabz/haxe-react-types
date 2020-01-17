@@ -1,6 +1,6 @@
 package react.types.or;
 
+import haxe.extern.EitherType;
 import react.ReactComponent.ReactFragment;
 
-@:coreType
-abstract FragmentOrCallback from ReactFragment from Void->ReactFragment {}
+typedef FragmentOrCallback = EitherType<ReactFragment, Void->ReactFragment>;

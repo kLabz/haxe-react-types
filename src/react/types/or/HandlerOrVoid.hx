@@ -1,6 +1,7 @@
 package react.types.or;
 
+import haxe.Constraints.Function;
+import haxe.extern.EitherType;
 import react.types.event.ClassicHandler;
 
-@:coreType
-abstract HandlerOrVoid<Handler> from Handler from Noop from ClassicHandler {}
+typedef HandlerOrVoid<Handler:Function> = EitherType<Handler, EitherType<Noop, ClassicHandler>>;

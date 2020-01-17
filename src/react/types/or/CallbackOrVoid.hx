@@ -1,4 +1,5 @@
 package react.types.or;
 
-@:coreType
-abstract CallbackOrVoid<Callback> from Callback from Noop {}
+import haxe.extern.EitherType;
+
+typedef CallbackOrVoid<Callback> = EitherType<Callback, Noop>;

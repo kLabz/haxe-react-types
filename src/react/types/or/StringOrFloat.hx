@@ -1,4 +1,5 @@
 package react.types.or;
 
-@:coreType
-abstract StringOrFloat from String from Float {}
+import haxe.extern.EitherType;
+
+typedef StringOrFloat = EitherType<String, EitherType<Float, Int>>;

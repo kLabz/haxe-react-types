@@ -1,6 +1,6 @@
 package react.types.or;
 
+import haxe.extern.EitherType;
 import js.html.DOMElement;
 
-@:coreType
-abstract DOMOrCallback from DOMElement from Void->DOMElement {}
+typedef DOMOrCallback = EitherType<DOMElement, Void->DOMElement>;

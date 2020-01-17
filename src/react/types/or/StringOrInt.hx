@@ -1,4 +1,5 @@
 package react.types.or;
 
-@:coreType
-abstract StringOrInt from String from Int {}
+import haxe.extern.EitherType;
+
+typedef StringOrInt = EitherType<String, Int>;
