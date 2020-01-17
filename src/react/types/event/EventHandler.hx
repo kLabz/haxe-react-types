@@ -1,9 +1,9 @@
-package react.types;
+package react.types.event;
 
 import js.html.DOMElement;
-import react.types.event.SyntheticEvent;
+import react.types.SyntheticEvent;
 
-typedef EventHandler<TElement:DOMElement, E:BaseSyntheticEvent<TElement>> = react.types.event.EventHandler<TElement, E>;
+typedef EventHandler<TElement:DOMElement, E:BaseSyntheticEvent<TElement>> = E->Void;
 typedef ReactEventHandler<TElement:DOMElement> = EventHandler<TElement, BaseSyntheticEvent<TElement>>;
 
 typedef ClipboardEventHandler<TElement:DOMElement> = EventHandler<TElement, ClipboardEvent<TElement>>;
