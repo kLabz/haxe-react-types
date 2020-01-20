@@ -15,8 +15,6 @@ typedef Display = String;
 typedef Mask = String;
 
 typedef SVGAttributes<T:DOMElement> = {
-	> DOMAttributes<T>,
-
 	// Attributes which also defined in HTMLAttributes
 	@:optional var className:String;
 	@:optional var color:String;
