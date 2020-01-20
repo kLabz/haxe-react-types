@@ -1,4 +1,3 @@
 package react.types;
 
-@:coreType
-abstract ReactText from String from Float {}
+typedef ReactText = EitherType<String, Float>
