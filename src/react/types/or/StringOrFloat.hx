@@ -1,5 +1,3 @@
 package react.types.or;
 
-import haxe.extern.EitherType;
-
-typedef StringOrFloat = EitherType<String, EitherType<Float, Int>>;
+typedef StringOrFloat = EitherType<String, Float, Int>;
