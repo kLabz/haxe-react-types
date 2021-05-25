@@ -4,4 +4,5 @@ import haxe.Constraints.Function;
 import haxe.extern.EitherType;
 import react.types.event.ClassicHandler;
 
-typedef HandlerOrVoid<Handler:Function> = EitherType<Handler, EitherType<Noop, ClassicHandler>>;
+@:callable
+abstract HandlerOrVoid<Handler:Function>(Function) from Handler from Noop from ClassicHandler {}
