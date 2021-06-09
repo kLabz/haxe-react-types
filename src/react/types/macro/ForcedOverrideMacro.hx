@@ -20,7 +20,7 @@ class ForcedOverrideMacro {
 			case TInst(_, []): throw false;
 
 			case TInst(_, types):
-				var fields:FieldMap = Lambda.fold(types, reduceFields, []);
+				var fields:FieldMap = Lambda.fold(types, reduceFields, new Map<String, Field>());
 				return TAnonymous(Lambda.array(fields));
 
 			default: throw false;
